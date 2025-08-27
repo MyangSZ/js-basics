@@ -4,3 +4,6 @@
 - 반복문 for 기초 (for.html)
 - 반복문 while 기초 (while.html)
 - createElement & appendChild 기초
+
+- 실습 (monster.html)
+  몬스터 공격 게임

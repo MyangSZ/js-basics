@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>몬스터 잡기 게임</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      let monsterHP = 100;
+      const container = document.getElementById("container");
+      const h1 = document.createElement("h1");
+      h1.textContent = "Monster 잡기 게임 시작!";
+      container.appendChild(h1); // h1 컨테이너 추가
+
+      let attackDamage = parseInt(prompt("공격 데미지 입력"));
+      //parsInt 사용해 문자열을 숫자로 변환
+      let attackCount = 0;
+
+      if (attackDamage > 0) {
+        // 데미지 확인. 데미지 0일때까지 어택
+        while (monsterHP > 0) {
+          monsterHP -= attackDamage; // hp 감소
+          attackCount += 1;
+
+          // 화면에 몬스터 공격 횟수 표시
+          const p = document.createElement("p");
+          p.textContent = `몬스터를 ${attackCount}호 공격 완료`;
+          container.append(p);
+
+          // 남은 HP 확인하기
+          const strong = document.createElement("strong");
+          strong.textContent = `몬스터의 남은 HP는 ${monsterHP}입니다.`;
+          container.append(strong);
+        }
+
+        // 게임 끝 출력
+        const h2 = document.createElement("h2");
+        h2.textContent = "게임이 끝났습니다.";
+        h2.style.color = "red";
+        h2.title = " re start : 새로고침";
+        container.append(h2);
+
+        console.log(attackCount);
+      } else {
+        alert("데미지가 잘못 입력 되었습니다.");
+      }
+    </script>
+  </body>
+</html>
