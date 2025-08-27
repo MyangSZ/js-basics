@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      // 함수호출문 : 함수명 + 소괄호
+      // 소괄호 역할 : 함수 실행시 사용할 재료를 전달받는 것. 전달 데이터를 가르켜 인수라고 함
+      // function 함수명(매개변수)
+      // return 함수데이터 반환
+
+      console.log(createParagraph(1, "red"));
+      console.log(createParagraph(2, "blue"));
+      console.log(createParagraph(3, "green"));
+
+      function createParagraph(content, color) {
+        const p = document.createElement("p");
+        p.style.color = color;
+        p.textContent = content;
+        document.querySelector("#container").append(p);
+
+        return `방금만든 태그 콘텐츠 : ${content}, color: ${color}`;
+      }
+    </script>
+  </body>
+</html>
