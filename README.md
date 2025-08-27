@@ -6,7 +6,7 @@
 - createElement & appendChild 기초
 
 - 실습 (monster.html)
-  몬스터 공격 게임
+  - 몬스터 공격 게임
 
 ---
 
