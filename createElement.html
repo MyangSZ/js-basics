@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>createElement & appendChild</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      // append() / appendChild() 기본 사용법
+      // target.appendChild(자식으로 추가할 요소)
+      // append : 노드 객체 또는 문자열 자식 요소로 추가 / 반환 없음
+      // appendChild : 노드 객체만 추가 / 자식노드 반환
+
+      // for문 사용해 5번 반복해보기
+      for (let a = 1; a <= 5; a += 1) {
+        const div = document.getElementById("container");
+
+        const box = document.createElement("div");
+        console.log(box);
+
+        box.style.color = "pink";
+        box.style.width = "100";
+        box.style.height = "100";
+        box.textContent = "어쩌라고";
+
+        console.log(div.appendChild(box)); // 반환됨
+        console.log(div.append(box));
+      } // 반환안함 undefined 반환
+    </script>
+  </body>
+</html>
