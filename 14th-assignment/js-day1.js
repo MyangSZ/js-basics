@@ -19,13 +19,25 @@
 // 여기에 코드를 작성해주세요.
 let key;
 // 보기: 100 number
+key = 100;
+console.log(key, typeof key);
 
 // 보기: true boolean
+key = true;
+console.log(key, typeof key);
 
 // 보기: 보물은 내꺼 string
+key = "보물은 내꺼";
+console.log(key, typeof key);
 
 // 보기: {} object
+key = {};
+console.log(key, typeof key);
 
 // 보기: 20 number
+key = 20;
+console.log(key, typeof key);
 
 // 보기: 보물을 내손에 넣었다! string
+key = "보물을 내손에 넣었다!";
+console.log(key, typeof key);
