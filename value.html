@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>value 속성 이해</title>
+  </head>
+  <body>
+    <input id="talk" />
+    <input id="push" type="button" value="push" />
+
+    <form id="form">
+      <input name="name" />
+      <input name="nick" />
+      <input type="submit" />
+    </form>
+
+    <script>
+      // value : 사용자가 직접 요소에 입력한 값에 접근
+
+      // 대상 요소의 사용자 입력값 콘솔에 출력
+      // console.log(target.value)
+
+      // 대상 요소의 사용자 입력값을 변경값으로 바꾸자
+      // target.value = "변경값"
+
+      /*   const input = document.getElementById("talk");
+      const button = document.getElementById("push");
+
+      //   button.addEventListener("click", function () {
+      //     alert(input.value); // 입력 내용 출력
+      //     input.value = "버튼 눌러야 써져요";
+      //   });
+
+      // 키보드 누를때마다 console에 출력
+      input.addEventListener("keyup", function (e) {
+        console.log(e.target.value);
+      });
+
+      // 버튼 클릭시 input에 쓰여진 내용으로 이루어진 p태그 추가
+      button.addEventListener("click", function () {
+        const p = document.createElement("p");
+        p.textContent = input.value;
+        document.body.append(p);
+      }); */
+
+      // form의 submit 활용. submit 이벤트에 대한 event target
+      // form에 접근할 때는 각 입력 요소의 name 활용
+      const form = document.getElementById("form");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // 새로고침 안함. 기본적인것을 차단
+        const p = document.createElement("p");
+        p.textContent = `${event.target.name.value}의 별명은
+        ${event.target.nick.value}`;
+        document.body.append(p);
+      });
+    </script>
+  </body>
+</html>
