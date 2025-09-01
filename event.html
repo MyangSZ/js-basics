@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 & 이벤트 헨들러</title>
+  </head>
+  <body>
+    <button id="span">SPAN</button>
+    <button id="strong">STRONG</button>
+    <button id="mark">MARK</button>
+    <hr />
+    <script>
+      // click event발생하면 함수 호출
+      // target.addEventListener ('click', function()){}
+
+      // click 이벤트 발생 시 함수 호출
+      // + 이떄 자동으로 전달되는 이벤트 객체를 매개변수 event에 대입
+      // target.addEventListener('click', function(event){})
+
+      const spanBtn = document.getElementById("span");
+      const strongBtn = document.getElementById("strong");
+      const markBtn = document.getElementById("mark");
+
+      /*       // 함수 선언식
+      function handleClick() {
+        alert("클릭!");
+      }
+      spanBtn.onclick = handleClick; // 소괄호x. 예약해둔 상태 */
+
+      /*       // 함수표현식
+      spanBtn.onclick = function () {
+        alert("클릭!");
+      }; */
+
+      // 함수 표현식으로 span click 시 문자 발생
+      spanBtn.onclick = function () {
+        const span = document.createElement("span");
+        span.textContent = "새로 생긴 span ";
+        document.body.append(span);
+      };
+
+      //이벤트 핸들러 등록시 선호되는 방법 addEventListener
+      strongBtn.addEventListener("click", function () {
+        const strong = document.createElement("strong");
+        strong.textContent = "새로 생긴 strong ";
+        document.body.append(strong);
+      });
+
+      // event객체 사용하기
+      // 매가변수 추가, 이벤트 발생 시 이벤트 관련 정보가 담긴 데이터 전달. 인수자동전달
+      const handleClick = function (event) {
+        if (event.target.id == "span") {
+          const span = document.createElement("span");
+          span.textContent = "새로 생긴 span ";
+          document.body.append(span);
+        } else if (event.target.id == "strong") {
+          const strong = document.createElement("strong");
+          strong.textContent = "새로 생긴 strong ";
+          document.body.append(strong);
+        } else if (event.target.id == "mark") {
+          const mark = document.createElement("mark");
+          mark.textContent = "새로 생긴 mark ";
+          document.body.append(mark);
+        }
+      };
+
+      spanBtn.addEventListener("click", handleClick);
+      strongBtn.addEventListener("click", handleClick);
+      markBtn.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>
