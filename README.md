@@ -18,3 +18,4 @@
 ---
 
 - Object literal (objectLiteral.html)
+- JSON (JSON.html)

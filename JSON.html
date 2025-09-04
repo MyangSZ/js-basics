@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //JSON 형식 : 자바스크립트 객체 리터럴을 문자열 형식으로 변환한 것
+      const meal = {
+        what: "pizza",
+        who: "alone",
+        when: "now",
+      };
+
+      //   JSON.stringify 객체리터럴 문자열로 바꿈
+      //   JSON.parse JSON형식 문자열을 실제 객체리터럴로 바꿈
+
+      console.log(meal);
+      console.log(JSON.stringify(meal));
+      console.log(typeof meal);
+
+      let sm = JSON.stringify(meal);
+      console.log(JSON.parse(sm));
+    </script>
+  </body>
+</html>
