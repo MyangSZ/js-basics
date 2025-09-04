@@ -19,3 +19,4 @@
 
 - Object literal (objectLiteral.html)
 - JSON (JSON.html)
+- localStorage 사용법 (localStorage.html)
