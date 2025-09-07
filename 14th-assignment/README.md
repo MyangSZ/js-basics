@@ -10,3 +10,4 @@
 - day7 : 마왕 물리치기 (배열, 배열매서드, 함수, number타입, Math.random(), 조건문, 반복문, Array.prototype.reduce())
 - day7-2 : 직원관리하기 (spread 문법, 객체복사, 함수)
 - day8 : 템플릿 만들기 (구조분해할당, 템플릿 리터럴, 함수, 문자열, string)
+- day0 : 음식주문서 만들기 (배열 메서드 활용)
