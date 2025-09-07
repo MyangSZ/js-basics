@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: gray; */
+  height: 100vh;
+}
+.app {
+  width: 300px;
+  height: 500px;
+  background-color: #ffd6dd;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 8px 8px 10px rgb(160, 160, 160);
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+ul > li {
+  margin-top: 5px;
+  font-weight: 600;
+}
+.done {
+  color: #ff69b4;
+}
+.yet:hover,
+.done:hover {
+  color: white;
+}
+h1 {
+  color: #ff69b4;
+}
