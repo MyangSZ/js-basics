@@ -3,7 +3,8 @@
   - fetch()를 완성하여 OPEN API에 GET 요청을 보내주세요.
   - GET 요청으로 받은 Response를 활용하여 weatherData에 응답 바디에서 값을 가져와 JavaScript 객체로 만들어주세요.
   - `writeWeatherText` 함수를 활용하여 오늘의 날씨 화면을 구성해주세요.
-  - <details><summary> 제공 코드 설명
+  - <details><summary> 제공 코드 설명 </summary>
+
   - WeatherCode
     - 내용: 날씨 코드를 날씨 텍스트로 바꿔주는 객체입니다.
     - 구성
@@ -79,7 +80,7 @@
   getWeather();
   ```
 
-  </summary>
+  </details>
 
 - 복습할 개념 체크 리스트
   - [ ] fetch()
