@@ -1,8 +1,10 @@
 - 요구사항 :
+
   - fetch()를 완성하여 OPEN API에 GET 요청을 보내주세요.
   - GET 요청으로 받은 Response를 활용하여 weatherData에 응답 바디에서 값을 가져와 JavaScript 객체로 만들어주세요.
   - `writeWeatherText` 함수를 활용하여 오늘의 날씨 화면을 구성해주세요.
-  - 제공 코드 설명
+  - \* 제공 코드 설명
+
     - WeatherCode
       - 내용: 날씨 코드를 날씨 텍스트로 바꿔주는 객체입니다.
       - 구성
@@ -48,6 +50,7 @@
     - getWeather
       - 전달인자: 없음
       - 내용: fetch를 활용하여 데이터를 받아와 weatherData 변수에 저장합니다.
+
     ```jsx
     import WeatherCode from "./WeatherCode.json"; // 날씨 코드 변환용 객체
 
@@ -76,6 +79,7 @@
 
     getWeather();
     ```
+
 - 복습할 개념 체크 리스트
   - [ ] fetch()
   - [ ] async/await
