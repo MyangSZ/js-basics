@@ -1,0 +1,48 @@
+/* 기본 세팅 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  background: linear-gradient(to bottom right, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+/* 타이틀 */
+.title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 날씨 정보 카드 */
+#weather {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: start;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  min-width: 280px;
+  max-width: 340px;
+}
+
+/* 온도/날씨 텍스트 강조 */
+#weather strong {
+  color: #0077ff;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+/* 아이콘 스타일 */
+.weather-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
