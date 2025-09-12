@@ -22,3 +22,4 @@
 - localStorage 사용법 (localStorage.html)
 - 배열 메소드 추가 학습 (ArrayMethods.html)
 - 할일목록 만들기 프로젝트 (todoListPJ 폴더)
+- 견종 정보 페이지 만들기 (DogPage 폴더)
