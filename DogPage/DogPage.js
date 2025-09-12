@@ -13,6 +13,15 @@ const select = document.getElementById("filter-select");
 // 현재 화면에 표시되는 강이지 배열
 const currentDogs = [];
 
+// forEach문 재사용을 위한 함수만들기
+function displayDogs(item) {
+  const dogImgDiv = document.createElement("div");
+  dogImgDiv.classList.add("flex-item");
+  dogImgDiv.innerHTML = ` 
+        <img src=${item}>`;
+  main.appendChild(dogImgDiv);
+}
+
 // 웹브라우저 로드 시 동작
 window.addEventListener("load", function () {
   // 강아지 사진 뿌리기
@@ -24,11 +33,12 @@ window.addEventListener("load", function () {
       // 강이지 소스 추가
       currentDogs.push(item);
       // div 만들어서 메인에 추가
-      const dogImgDiv = document.createElement("div");
+      /* const dogImgDiv = document.createElement("div");
       dogImgDiv.classList.add("flex-item");
       dogImgDiv.innerHTML = ` 
         <img src=${item}>`;
-      main.appendChild(dogImgDiv);
+      main.appendChild(dogImgDiv); */
+      displayDogs(item);
     });
   });
   request1.send();
@@ -62,10 +72,21 @@ button.addEventListener("click", function () {
     return item.indexOf(input.value) !== -1;
   });
 
+  input.value = "";
+
   filterDogs.forEach(function (item) {
-    const option = document.createElement("option");
-    option.textContent = item;
-    option.value = item;
-    select.appendChild(option);
+    displayDogs(item);
+  });
+});
+
+// select 필터링
+select.addEventListener("change", function () {
+  main.innerHTML = "";
+  let filterDogs = currentDogs.filter(function (item) {
+    return item.indexOf(select.value) !== -1;
+  });
+
+  filterDogs.forEach(function (item) {
+    displayDogs(item);
   });
 });
