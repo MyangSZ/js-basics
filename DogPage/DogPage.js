@@ -9,6 +9,8 @@ const main = document.getElementById("main");
 const input = document.getElementById("filter-text");
 const button = document.getElementById("filter-button");
 const select = document.getElementById("filter-select");
+const more = document.getElementById("more");
+const tothetop = document.getElementById("tothetop");
 
 // 현재 화면에 표시되는 강이지 배열
 const currentDogs = [];
@@ -89,4 +91,23 @@ select.addEventListener("change", function () {
   filterDogs.forEach(function (item) {
     displayDogs(item);
   });
+});
+
+// more. top button
+more.addEventListener("click", function () {
+  request1.open("get", apiRandomDogs);
+  request1.addEventListener("load", function () {
+    const response = JSON.parse(request1.response);
+    response.message.forEach(function (item) {
+      currentDogs.push(item);
+
+      displayDogs(item);
+    });
+  });
+  request1.send();
+});
+
+tothetop.addEventListener("click", function () {
+  //scrollTo : 주어진 위치로 스크롤 이동
+  window.scrollTo({ top: 0 });
 });

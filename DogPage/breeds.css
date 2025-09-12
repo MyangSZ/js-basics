@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  /* 스크롤 이동 부드럽게 하기 */
   scroll-behavior: smooth;
 }
 html,
